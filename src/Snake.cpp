@@ -13,22 +13,22 @@ using namespace std;
 int main(int argc, char const *argv[])
 {
     Ventana ventana;
-    Vibora *vibora1 = new Vibora(5, 5);
+    Vibora *vibora1 = new Vibora(10, 4);
     Vibora *vibora2 = new Vibora(50, 50);
-    Comida *comida1 = new Comida(56, 78);
-    Comida *comida2 = new Comida(123, 35);
-    Comida *comida3 = new Comida(98, 92);
-    Comida *comida4 = new Comida(26, 90);
+    // Comida *comida1 = new Comida(60, 30);
+    Comida *comida2 = new Comida(40, 10);
+    Comida *comida3 = new Comida(5, 30);
+    Comida *comida4 = new Comida(11, 1);
     Letra *tituloSnake = new Letra(100, 50);
 
     list<Dibujo *> dibujos;
     dibujos.push_back(vibora1);
     dibujos.push_back(vibora2);
-    dibujos.push_back(comida1);
+    // dibujos.push_back(comida1);
     dibujos.push_back(comida2);
     dibujos.push_back(comida3);
     dibujos.push_back(comida4);
-    // dibujos.push_back(tituloSnake);
+    dibujos.push_back(tituloSnake);
 
     list<Actualizable *> actualizables;
     actualizables.push_back(vibora1);
@@ -52,10 +52,12 @@ int main(int argc, char const *argv[])
         if (key == 'w' || key == KEY_UP)
         {
             vibora1->Arriba();
+            // vibora2->Arriba();
         }
         if (key == 's' || key == KEY_DOWN)
         {
             vibora1->Abajo();
+            // vibora2->Abajo();
         }
         ventana.Actualizar(actualizables);
         ventana.Dibujar(dibujos);

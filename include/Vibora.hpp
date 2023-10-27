@@ -33,8 +33,6 @@ public:
     void Actualizar()
     {
         this->x += this->direccion;
-        // this->x += 0;
-        // this->y += 0;
     }
     void CambiarDireccion(){
         this->direccion*=-1;
