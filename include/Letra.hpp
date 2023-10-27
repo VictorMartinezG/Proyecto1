@@ -2,17 +2,18 @@
 #include <Dibujo.hpp>
 #include <iostream>
 
-class Comida : public Dibujo
+class Letra : public Dibujo
 {
 private:
+    /* data */
 public:
-    Comida() : Dibujo("Comida")
+    Letra() : Dibujo("Snake")
     {
     }
-    Comida(int x, int y) : Dibujo(x, y, "Comida")
+    Letra(int x, int y) : Dibujo(x, y, "Snake")
     {
         this->x += 0;
         this->y += 0;
     }
-    ~Comida() {}
+    ~Letra() {}
 };
