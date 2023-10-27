@@ -1,6 +1,5 @@
 #pragma once
 #include <Dibujo.hpp>
-#include <iostream>
 
 class Comida : public Dibujo
 {
