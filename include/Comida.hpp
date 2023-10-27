@@ -1,9 +1,12 @@
 #pragma once
 #include <Dibujo.hpp>
+#include <iostream>
 
 class Comida : public Dibujo
 {
 private:
+    /* data */
+
 public:
     Comida() : Dibujo("Comida")
     {

@@ -5,13 +5,14 @@
 class Vibora : public Dibujo, public Actualizable
 {
 private:
-
+int direccion;
 public:
     Vibora() : Dibujo("Serpiente")
     {
     }
     Vibora(int x, int y) : Dibujo(x, y, "Serpiente")
     {
+        this->direccion=1;
     }
     void Izquierda()
     {
@@ -31,8 +32,12 @@ public:
     }
     void Actualizar()
     {
-        this->x += 0;
-        this->y += 0;
+        this->x += this->direccion;
+        // this->x += 0;
+        // this->y += 0;
+    }
+    void CambiarDireccion(){
+        this->direccion*=-1;
     }
     ~Vibora() {}
 };

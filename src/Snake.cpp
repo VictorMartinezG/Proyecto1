@@ -13,7 +13,8 @@ using namespace std;
 int main(int argc, char const *argv[])
 {
     Ventana ventana;
-    Vibora *vibora1 = new Vibora(0, 0);
+    Vibora *vibora1 = new Vibora(5, 5);
+    Vibora *vibora2 = new Vibora(50, 50);
     Comida *comida1 = new Comida(56, 78);
     Comida *comida2 = new Comida(123, 35);
     Comida *comida3 = new Comida(98, 92);
@@ -22,14 +23,16 @@ int main(int argc, char const *argv[])
 
     list<Dibujo *> dibujos;
     dibujos.push_back(vibora1);
-    // dibujos.push_back(comida1);
-    // dibujos.push_back(comida2);
-    // dibujos.push_back(comida3);
-    // dibujos.push_back(comida4);
+    dibujos.push_back(vibora2);
+    dibujos.push_back(comida1);
+    dibujos.push_back(comida2);
+    dibujos.push_back(comida3);
+    dibujos.push_back(comida4);
     // dibujos.push_back(tituloSnake);
 
     list<Actualizable *> actualizables;
     actualizables.push_back(vibora1);
+    actualizables.push_back(vibora2);
 
     while (true)
     {
@@ -40,11 +43,11 @@ int main(int argc, char const *argv[])
         }
         if (key == 'a' || key == KEY_LEFT)
         {
-            vibora1->Izquierda();
+            vibora1->CambiarDireccion();
         }
         if (key == 'd' || key == KEY_RIGHT)
         {
-            vibora1->Derecha();
+            vibora1->CambiarDireccion();
         }
         if (key == 'w' || key == KEY_UP)
         {
@@ -57,6 +60,5 @@ int main(int argc, char const *argv[])
         ventana.Actualizar(actualizables);
         ventana.Dibujar(dibujos);
     }
-
     return 0;
 }
