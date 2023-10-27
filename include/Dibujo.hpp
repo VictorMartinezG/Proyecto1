@@ -1,4 +1,5 @@
 #pragma once
+#include <iostream>
 #include <fstream>
 #include <string>
 #include <curses.h>
@@ -30,9 +31,13 @@ public:
     {
         std::string linea;
         move(this->y, this->x);
+        //move(this->x, this->y);
         while (std::getline(archivo, linea))
         {
-            mvaddstr(getcury(stdscr) + 1, this->x, linea.c_str());
+            mvaddstr(getcury(stdscr) +1, this->x, linea.c_str());
+            // mvaddstr(getcury(stdscr) + 1, this->y, linea.c_str());
+            // mvaddstr(this->y + 1, this->x, linea.c_str());
+            // mvaddstr(this->y, this->x, linea.c_str());
         }
         archivo.clear();
         archivo.seekg(0);

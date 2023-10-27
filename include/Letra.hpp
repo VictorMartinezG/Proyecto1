@@ -1,9 +1,11 @@
 #pragma once
 #include <Dibujo.hpp>
+#include <iostream>
 
 class Letra : public Dibujo
 {
 private:
+    /* data */
 public:
     Letra() : Dibujo("Snake")
     {

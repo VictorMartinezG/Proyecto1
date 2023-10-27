@@ -1,3 +1,5 @@
+#include <stdio.h>
+#include <stdlib.h>
 #include <Dibujo.hpp>
 #include <Ventana.hpp>
 #include <Vibora.hpp>
@@ -12,19 +14,19 @@ int main(int argc, char const *argv[])
 {
     Ventana ventana;
     Vibora *vibora1 = new Vibora(0, 0);
-    Comida *comida1 = new Comida(56,78);
-    Comida *comida2 = new Comida(123,35);
-    Comida *comida3 = new Comida(98,92);
-    Comida *comida4 = new Comida(26,90);
-    Letra *snake = new Letra(100,50);
+    Comida *comida1 = new Comida(56, 78);
+    Comida *comida2 = new Comida(123, 35);
+    Comida *comida3 = new Comida(98, 92);
+    Comida *comida4 = new Comida(26, 90);
+    Letra *tituloSnake = new Letra(100, 50);
 
     list<Dibujo *> dibujos;
     dibujos.push_back(vibora1);
-    dibujos.push_back(comida1);
-    dibujos.push_back(comida2);
-    dibujos.push_back(comida3);
-    dibujos.push_back(comida4);
-    dibujos.push_back(snake);
+    // dibujos.push_back(comida1);
+    // dibujos.push_back(comida2);
+    // dibujos.push_back(comida3);
+    // dibujos.push_back(comida4);
+    // dibujos.push_back(tituloSnake);
 
     list<Actualizable *> actualizables;
     actualizables.push_back(vibora1);
